@@ -1,49 +1,45 @@
-//Object Destructuring
+//
+// Object destructuring
+//
 
-/* const person = {
-    name: 'Chris',
-    age: 29,
-    location: {
-        city: 'Tampa',
-        temp: 85
-    }
-};
+// const person = {
+//   name: 'Andrew',
+//   age: 27,
+//   location: {
+//     city: 'Philadelphia',
+//     temp: 88
+//   }
+// };
 
-const { name: firstName = 'Anonymous', age } = person;
+// const { name: firstName = 'Anonymous', age } = person;
+// console.log(`${firstName} is ${age}.`);
 
-console.log(`${firstName} is ${age}.`);
+// const { city, temp: temperature } = person.location;
+// if (city && temperature) {
+//   console.log(`It's ${temperature} in ${city}.`);
+// }
 
-const { temp: temperature, city } = person.location;
+// const book = {
+//   title: 'Ego is the Enemy',
+//   author: 'Ryan Holiday',
+//   publisher: {
+//     // name: 'Penguin'
+//   }
+// };
 
-if (city && temperature) {
-    console.log(`It's ${temperature} in ${city}.`);
-} */
+// const { name: publisherName = 'Self-Published' } = book.publisher;
 
-/* const book = {
-    title: 'Ego Is The Enemy',
-    author: 'Ryan Holiday',
-    publisher: {
-        name: 'Penguin'
-    }
-};
+// console.log(publisherName); // Penguin, Self-Published
 
-const { name: publisherName = 'Self-Published' } = book.publisher;
+//
+// Array destructuring
+//
 
-console.log(`${publisherName} published the book.`); */
+// const address = ['1299 S Juniper Street', 'Philadelphia', 'Pennsylvania', '19147'];
+// const [, city, state = 'New York'] = address;
+// console.log(`You are in ${city} ${state}.`);
 
+const item = ['Coffee (iced)', '$3.00', '$3.50', '$3.75'];
+const [itemName, , mediumPrice] = item;
 
-//Array Destructuring
-
-/* const address = ['9010 Palm River Rd', 'Tampa', 'Florida', '33647'];
-
-const [street, city, state = 'New York', zip] = address;
-
-console.log(`You are in ${city}, ${state}, ${zip}.`); */
-
-
-const item = ['Coffee', '$2', '$5', '$7'];
-
-const [menuItem, small, medium, large] = item;
-
-console.log(`${menuItem} cost ${small} for a small and ${medium} for a medium.`);
-
+console.log(`A medium ${itemName} costs ${mediumPrice}`);
